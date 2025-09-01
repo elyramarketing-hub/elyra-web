@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ELYRA - Where Hope Meets Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#0A0C10',
+              'brand-secondary': '#1A1C22',
+              'brand-accent': '#D6B370',
+              'brand-highlight': '#D6B370',
+              'brand-text': '#F5EDE1',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Cormorant Garamond', 'serif'],
+            },
+            backgroundImage: {
+              'gradient-hero': 'linear-gradient(135deg, #0A0C10, #1A1C22, #D6B370)',
+              'gradient-page': 'linear-gradient(180deg, #0A0C10, #D6B370)',
+              'gradient-page-light': 'linear-gradient(180deg, #D6B370, #F5EDE1)',
+              'gradient-content-inverse': 'linear-gradient(0deg, #D6B370, #0A0C10)',
+            },
+            letterSpacing: {
+              'ml': '0.01em', // Custom tracking for Malayalam
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'glow': 'glow 4s infinite ease-in-out',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              glow: {
+                '0%, 100%': { opacity: '0.8', transform: 'scale(1)' },
+                '50%': { opacity: '1', transform: 'scale(1.05)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 dark:bg-brand-primary text-gray-800 dark:text-brand-text font-sans transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
